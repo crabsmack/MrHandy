@@ -5,17 +5,17 @@ start = time.time()
 hours = 0
 while True:
     if hours != 0:
-        message = ''
+        messages = []
         if hours % 1 == 0:
-            message += "hand poses"
-            message += ", finger stretch"
-            message += ", massage hands"
-            message += ", take a walk"
+            messages.append("hand poses")
+            messages.append("finger stretch")
+            messages.append("massage hands")
+            messages.append("take a walk")
         if hours % 2 == 0:
-            message += ", shake wrists and fingers"
+            messages.append("shake wrists and fingers")
         if hours % 3 == 0:
-            message += ", pull wrists"
-        easygui.msgbox(message)
+            messages.append("pull wrists")
+        easygui.msgbox(", ".join(messages))
         # print(str(hours) + " " + message)
-    time.sleep(600.0 - ((time.time() - start) % 600.0))
+    time.sleep(10.0 - ((time.time() - start) % 10.0))
     hours += 1
