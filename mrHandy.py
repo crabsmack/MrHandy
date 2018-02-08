@@ -17,5 +17,5 @@ while True:
             messages.append("pull wrists")
         easygui.msgbox(", ".join(messages))
         # print(str(hours) + " " + message)
-    time.sleep(600.0 - ((time.time() - start) % 600.0))
+    time.sleep(3600.0 - ((time.time() - start) % 3600.0))
     hours += 1
